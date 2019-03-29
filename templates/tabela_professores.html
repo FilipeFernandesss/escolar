@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Professor | Início</title>
+    <link rel="stylesheet" href="static/agr.css">
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <style>
+        table, tr, td {font-size: 1.2em; border: 1px solid; margin-left: 5px; margin-top: 5px}
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="logo">
+            <a href="#">LOGO</a>
+        </h1>
+
+        {% if nome %}
+        <h1 class="welcome">Bem vindo {{nome}}</h1>
+        {% else %}
+        <h1>Nome não informado</h1>
+        {% endif %}
+    </header>
+    <table class="tabela">
+        <tr>
+            <td>Curso</td>
+            <td>Disciplina</td>
+        </tr>
+
+        {% for grade in grades %}
+            <tr>
+                <td>{{grade[3]}}</td>
+                <td><a target="_blank" href="/infor/{{nome}}/{{grade[3]}}/{{grade[0]}}">{{grade[0]}}</a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

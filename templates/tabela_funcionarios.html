@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funcionários | Início</title>
+    <link rel="stylesheet" href="static/vai.css">
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <style>
+        table, tr, td {font-size: 1.2em; border: 1px solid; margin-left: 5px; margin-top: 5px}
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="logo">
+            <a href="#">LOGO</a>
+        </h1>
+
+        {% if nome %}
+        <h1 class="welcome">Bem vindo {{nome}}</h1>
+        {% else %}
+        <h1>Nome não informado</h1>
+        {% endif %}
+    </header>
+
+    <table class="tabela">
+        <tr>
+            <td>Nome</td>
+            <td>Campus</td>
+            <td>Função</td>
+            <td>Salário</td>
+        </tr>
+
+        <tr>
+            <td>{{nome}}</td>
+            <td>{{informacoes[0]}}</td>
+            <td>{{informacoes[1]}}</td>
+            <td>$ {{informacoes[2]}}</td>
+
+        </tr>
+
+    </table>
+</body>
+</html>

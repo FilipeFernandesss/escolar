@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{disciplina}}</title>
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+
+
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="logo">
+            <a href="#">LOGO</a>
+        </h1>
+
+    </header>
+    <table class="table">
+        <tr>
+            <td>Disciplina</td>
+            <td>Turma</td>
+            <td>Alunos</td>
+            <td>Curso</td>
+        </tr>
+        {% for info in informacoes %}
+            {% if info[3] == curso %}
+                <tr>
+                    <td>{{info[0]}}</td>
+                    <td>{{info[1]}}</td>
+                    <td>{{info[2]}}</td>
+                    <td>{{info[3]}}</td>
+                </tr>
+
+            {% endif %}
+        {% endfor %}
+    </table>
+
+</body>
+</html>

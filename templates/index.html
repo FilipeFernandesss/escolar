@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/naofoi.css">
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <style>
+        form {font-size: 1.2em; margin-left: 8px}
+        span {font-size: 1.2em; margin-left: 8px}
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="logo">
+            <a href="index.html">LOGO</a>
+        </h1>
+
+    </header>
+
+    {% if erro %}
+        <span class="erro" style="color:red">{{erro}}</span>
+    {% endif %}
+    <form method="post" action="/login" class="box">
+        <h1>Login</h1>
+        <input type="text" name="login" maxlength="20" required autocomplete="on" placeholder="Username">
+
+        <input type="password" name="senha" required placeholder="Password">
+        <input type="submit" value="Logar">
+    </form>
+
+</body>
+</html>

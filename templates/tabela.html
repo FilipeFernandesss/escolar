@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico</title>
+    <link rel="stylesheet" href="static/agr.css">
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <style>
+        table, tr, td {font-size: 1.2em; border: 1px solid; margin-left: 5px; margin-top: 5px}
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="logo">
+            <a href="#">LOGO</a>
+        </h1>
+
+        {% if nome %}
+        <h1 class="welcome">Bem vindo {{nome}}</h1>
+        {% else %}
+        <h1>Nome não informado</h1>
+        {% endif %}
+    </header>
+
+    <table class="tabela">
+        <tr>
+            <td>Disciplina</td>
+            <td>Menção 1</td>
+            <td>Menção 2</td>
+            <td>Menção 3</td>
+        </tr>
+
+        {% for hist in historico %}
+            <tr>
+                <td> <a href="/detalhe/{{hist[0]}}" target="_blank" name={{hist[0]}}>{{hist[0]}}</a></td>
+                <td> {{hist[1]}}</td>
+                <td> {{hist[2]}}</td>
+                <td> {{hist[3]}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
