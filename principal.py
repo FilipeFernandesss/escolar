@@ -47,14 +47,11 @@ def login():
         return render_template("index.html", erro="Método inválido")
 
 
-@app.route('/detalhe/<disc>')
-def detalhe(disc):
-
-    if validar_disciplina(disc):
-
-        return render_template("detalhes.html", disciplina=disc, detalhes=disciplinas[disc])
-    else:
-        return "asdfsdfsf"
+@app.route('/detalhe/<id_disc>')
+def detalhe(id_disc):
+    print(id_disc)
+    cursor = mysql.get_db().cursor()
+    return render_template("detalhes.html",  detalhes=get_descricao(cursor, id_disc))
 
 
 @app.route("/infor/<user>/<curso>/<disci>")
