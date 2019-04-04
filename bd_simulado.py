@@ -1,4 +1,4 @@
-
+#
 #Grade dos professores
 grade_professores = {"professor123": [["Teoria da Computação", "Turma B", "23", "Ciência da Computação"], ["Lab. Programação", "Turma a", "21", "Ciência da Computação"], ["Sistemas de Informações", "Turma B", "23", "Ciência da Computação"]],
                      "professor1": [["Banco de Dados", "Turma a", "23", "Ciência da Computação"], ["Matemática Discreta", "Turma a", "21", "Ciência da Computação"], ["Lab. Programação", "Turma B", "20", "Ciência da Computação"]],
